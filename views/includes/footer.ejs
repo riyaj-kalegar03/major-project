@@ -1,0 +1,93 @@
+<!-- Bootstrap Footer -->
+<style>
+  .color {
+    color: #ee4b2b;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    font-family: "Comfortaa", cursive;
+  }
+</style>
+
+<footer
+  id="footer"
+  class="text-dark pt-4"
+  style="font-family: 'Arial', sans-serif"
+>
+  <div class="container">
+    <div class="row">
+      <!-- About Section -->
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <a class="navbar-brand brand color" href="/listings"
+          ><i class="fa-solid fa-house-tsunami"></i>&nbsp;HostHaven</a
+        >
+        <h6 class="text-uppercase mt-3">About Us</h6>
+        <p>
+          We are a company dedicated to providing the best service to our
+          customers. Your satisfaction is our priority.
+        </p>
+      </div>
+
+      <!-- Links Section -->
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <h6 class="text-uppercase">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="/listings" class="text-dark">Home</a></li>
+          <li><a href="#footer" class="text-dark">About</a></li>
+          <li>
+            <a href="/listings/new" class="text-dark">Airbnb Your Home</a>
+          </li>
+          <%if(!currUser){%>
+          <li><a href="/signup" class="text-dark">Sign Up</a></li>
+          <li><a href="/login" class="text-dark">Login</a></li>
+          <%}%> <%if(currUser){%>
+          <li><a href="/logout" class="text-darkdark">Logout</a></li>
+          <%}%>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <h6 class="text-uppercase">Contact</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark">Email: info@example.com</a></li>
+          <li><a href="#" class="text-dark">Phone: +123 456 7890</a></li>
+          <li><a href="#" class="text-dark">Address: 123 Street, City</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <h6 class="text-uppercase">Follow Us</h6>
+        <ul class="list-unstyled d-flex">
+          <li>
+            <a href="#" class="text-dark me-4"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="text-dark me-4"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="text-dark me-4"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+    <!-- Copyright -->
+    <div class="text-center pt-2">
+      <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- FontAwesome Icons (for social media) -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
