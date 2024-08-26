@@ -87,6 +87,50 @@ footer a:hover {
     margin-bottom: 1rem;
   }
   .navbar {
-    background-color: white;
+    background-color: white !important;
+  }
+
+  /*show.ejs*/
+  .show-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .show-list-title {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .show-card {
+    /*card and ratings and reviews*/
+    width: 100%;
+    margin: 0rem;
+    padding: 0;
+  }
+  .Review-card {
+    width: 100%;
+    padding: 0;
+    margin-left: 0 !important;
+  }
+  /*error.ejs and flash*/
+  .height {
+    margin: 0 !important;
+    height: 50px !important;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+  }
+  /*login and signup*/
+  .login-signup {
+    width: 100%;
+    margin: 0;
+  }
+  .login-signup button {
+    width: 100%;
+    margin: 0;
+  }
+  .login-signup a {
+    text-decoration: none;
   }
 }

@@ -1,7 +1,8 @@
 <% layout("./layouts/boilerplate.ejs") %>
+
 <body>
-  <div class="row">
-    <div class="col-8 offset-3 mt-3">
+  <div class="row show-list">
+    <div class="col-8 offset-3 mt-3 show-list-title">
       <h3><%= list.title%></h3>
     </div>
     <div class="card col-6 offset-3 show-card card-listing">
@@ -11,13 +12,13 @@
         alt="..."
       />
       <div class="card-body">
-        <p class="card-text">
+        <p class="card-text mb-1">
           owned by <%= list.owner.username%> <br />
           <b><%= list.title%></b> <br />
-          <%= list.description%> <br />
-          &#8377;<%=list.price%> <br />
-          <%= list.location%> <br />
-          <%= list.country%> <br />
+         <p class="mb-0"> <%= list.description%> </p><br />
+          &#8377;<%=list.price%>/night <br />
+          City: <%= list.location%> <br />
+          Country: <%= list.country%> <br />
         </p>
       </div>
     </div>
@@ -33,7 +34,8 @@
     </div>
     <%}%>
     <hr />
-    <div class="col-8 offset-3">
+
+    <div class="col-8 offset-3 show-card">
       <form
         method="post"
         action="/listings/<%=list._id%>/review"
@@ -108,10 +110,10 @@
       </form>
       <%}%>
       <hr />
-      <div class="row">
+      <div class="row show-card">
         <h4 class="mb-2 mt-2 mb-3">Reviews</h4>
         <% for(review of list.Review) {%>
-        <div class="card col-5 mb-3 ms-2">
+        <div class="card col-5 mb-3 ms-2 Review-card">
           <div class="card-body">
             <h6 class="card-title mt-2">
               <b><%= review.author.username %></b>
@@ -122,7 +124,7 @@
               data-rating="<%= review.rating %>"
             ></p>
             <p class="card-text"><%= review.comment %></p>
-
+            <% if( currUser && review.author.equals(currUser._id)) {%>
             <form
               class="mt-2 mb-2"
               method="post"
@@ -130,6 +132,7 @@
             >
               <button class="btn btn-sm btn-dark">Delete</button>
             </form>
+            <%}%>
           </div>
         </div>
 

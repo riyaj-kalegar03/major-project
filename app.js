@@ -43,10 +43,7 @@ main()
   });
 
 async function main() {
-  mongoose.connect(atlas_url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  mongoose.connect(atlas_url);
 }
 
 const store = MongoStore.create({
