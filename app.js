@@ -10,6 +10,7 @@ const ejsMate = require("ejs-mate");
 
 const path = require("path");
 const session = require("express-session");
+const MongoStore = require("connect-mongo");
 const flash = require("connect-flash");
 const methodOverride = require("method-override");
 const passport = require("passport");
@@ -42,12 +43,24 @@ main()
   });
 
 async function main() {
-  mongoose.connect(atlas_url);
+  mongoose.connect(atlas_url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 }
+
+const store = MongoStore.create({
+  mongoUrl: atlas_url,
+  crypto: {
+    secret: process.env.SECRET,
+  },
+  touchAfter: 24 * 3600, //for lazy update
+});
 
 app.use(
   session({
-    secret: "mysupersecret",
+    store: store,
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
