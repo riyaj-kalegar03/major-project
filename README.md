@@ -31,7 +31,7 @@ Before you begin, ensure you have the following installed:
 1. **Clone the repository**:
 
    ```
-   git clone https://github.com/riyaj-kalegar03/majore-project.git
+   git clone https://github.com/riyaj-kalegar03/major-project.git
 
    cd majore-project
    ```
