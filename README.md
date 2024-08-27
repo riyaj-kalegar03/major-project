@@ -1,10 +1,10 @@
 # HostHaven
 
-HostHaven is a web application that allows users to find and book lodges and hotels across various countries. Additionally, users can sign up to add and manage their own hotels on the platform. The project is built using EJS for the frontend, Express.js and Node.js for the backend, MongoDB as the database, and Passport.js for user authentication.
+HostHaven is a web application that allows users to find lodges and hotels across various countries. Additionally, users can sign up to add and manage their own hotels on the platform. The project is built using EJS for the frontend, Express.js and Node.js for the backend, MongoDB as the database, and Passport.js for user authentication.
 
 ## Features
 
-- **Find and book lodges and hotels** in different countries.
+- **Find lodges and hotels** in different countries.
 - **User authentication** with signup and login features using Passport.js.
 - **Add and manage hotels**: Users can list their own properties.
 - **Responsive design** ensuring compatibility with various devices.
