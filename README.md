@@ -53,19 +53,19 @@ SESSION_SECRET=your-session-secret
    node app.js
    The application will be accessible at http://localhost:8080/listings.
 
-## Usage
+### Usage
 
 -Browse: Visit http://localhost:3000 to view available hotels and lodges.
 -Register/Login: Use the signup/login feature to create an account.
 -Add Hotel: Once logged in, you can add and manage your own hotels .
 
-## Screenshort
+### Screenshort
 
 ![Homepage](/screenshort/Screenshot%202024-08-27%20101455.png)
 ![Hotel Details](/screenshort/Screenshot%202024-08-27%20101604.png)
 ![Hotel Details](/screenshort/Screenshot%202024-08-27%20101616.png)
 ![Add Hotel](/screenshort/Screenshot%202024-08-27%20101644.png)
 
-## Contributing
+### Contributing
 
 We welcome contributions! Feel free to fork this repository, open an issue, or submit a pull request
