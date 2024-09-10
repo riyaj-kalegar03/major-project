@@ -16,7 +16,7 @@ HostHaven is a web application that allows users to find lodges and hotels acros
 - **Database**: MongoDB
 - **Authentication**: Passport.js
 
-## Installation and Setup
+### Installation and Setup
 
 ### Prerequisites
 
